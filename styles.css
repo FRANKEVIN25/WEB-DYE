@@ -20,16 +20,22 @@ header nav a:hover {
 }
 
 /* Hero Section */
+/* Hero Section */
 .hero {
-    background-image: url('ruta/a/tu/imagen-de-fondo.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-image: url('casa.jpg'); /* Asegúrate de que la imagen esté en la carpeta correcta */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    
+    min-height: 100vh; /* Altura mínima: 100% de la pantalla */
+    width: 100vw;  /* Ocupa todo el ancho */
+    
+    display: flex; /* Permite centrar contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
     text-align: center;
-    color: #ffffff;
+    color: white; /* Asegura que el texto sea visible */
+    padding: 20px; /* Espacio alrededor para evitar que el contenido toque los bordes */
 }
 
 .hero h1 {
