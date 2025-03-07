@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos - DYE</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</head>
+<body class="font-sans bg-gray-50">
+
+    <!-- Header -->
+    <header class="bg-white shadow fixed top-0 w-full z-20">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600"><a href="../index.html">DYE</a></div>
+            <nav class="menu-container">
+                <ul class="menu md:flex space-x-8">
+                    <li class="menu-item"><a href="../index.html">Inicio</a></li>
+                    <li class="menu-item">
+                        <a href="nosotros.html">Nosotros</a>
+                        <ul class="submenu">
+                            <li><a href="nosotros.html#historia">Historia</a></li>
+                            <li><a href="nosotros.html#equipo">Equipo</a></li>
+                            <li><a href="nosotros.html#valores">Valores</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="servicios.html">Servicios</a>
+                        <ul class="submenu">
+                            <li><a href="servicios.html#diseno">Diseño</a></li>
+                            <li><a href="servicios.html#consultoria">Consultoría</a></li>
+                            <li><a href="servicios.html#gestion">Gestión</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item active">
+                        <a href="proyectos.html">Proyectos</a>
+                        <ul class="submenu">
+                            <li><a href="#recientes">Recientes</a></li>
+                            <li><a href="#destacados">Destacados</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="diferencia.html">La Diferencia</a>
+                        <ul class="submenu">
+                            <li><a href="diferencia.html#innovacion">Innovación</a></li>
+                            <li><a href="diferencia.html#calidad">Calidad</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="blogs.html">Blogs</a>
+                        <ul class="submenu">
+                            <li><a href="blogs.html#articulos">Últimos artículos</a></li>
+                            <li><a href="blogs.html#tendencias">Tendencias</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item"><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="overlay-bg"></div>
+
+    <!-- Sección Principal -->
+    <section class="parallax" id="proyectos">
+        <div class="overlay">
+            <h2 class="text-4xl font-bold">Nuestros Proyectos</h2>
+            <p class="text-xl mt-4">Innovación y calidad en cada uno de nuestros proyectos.</p>
+        </div>
+    </section>
+
+    <section class="content-section" id="recientes">
+        <div class="container mx-auto px-6 py-12">
+            <h2 class="text-3xl font-bold">Proyectos Recientes</h2>
+            <p class="mt-4">Explora nuestros últimos trabajos en diseño y optimización de espacios.</p>
+        </div>
+    </section>
+
+    <section class="content-section" id="destacados">
+        <div class="container mx-auto px-6 py-12">
+            <h2 class="text-3xl font-bold">Proyectos Destacados</h2>
+            <p class="mt-4">Algunos de los proyectos más impactantes que hemos desarrollado.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 DYE. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init();
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuContainer = document.querySelector(".menu-container");
+            const overlayBg = document.querySelector(".overlay-bg");
+
+            menuContainer.addEventListener("mouseenter", function () {
+                overlayBg.classList.add("show-overlay");
+            });
+
+            menuContainer.addEventListener("mouseleave", function () {
+                overlayBg.classList.remove("show-overlay");
+            });
+        });
+    </script>
+
+</body>
+</html>
