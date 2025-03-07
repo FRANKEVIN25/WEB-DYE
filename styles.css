@@ -1,0 +1,103 @@
+/* Estilos generales */
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Efecto Parallax */
+.parallax {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* Imágenes de fondo */
+#hero { background-image: url('assets/casa.jpg'); }
+#nosotros { background-image: url('assets/parque.jpg'); }
+#servicios { background-image: url('assets/casa.jpg'); }
+#proyectos { background-image: url('assets/parque.jpg'); }
+#diferencia { background-image: url('assets/casa.jpg'); }
+#blogs { background-image: url('assets/parque.jpg'); }
+#contacto { background-image: url('assets/casa.jpg'); }
+
+/* Capa de oscurecimiento */
+.overlay-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    display: none;
+}
+
+/* Activar sombreado */
+.show-overlay {
+    display: block;
+}
+
+/* Estilos del menú */
+.menu-container {
+    position: relative;
+    z-index: 20;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-item a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.menu-item a:hover {
+    color: #3b82f6;
+}
+
+/* Submenú */
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    display: none;
+    min-width: 200px;
+    z-index: 20;
+}
+
+.submenu li a {
+    display: block;
+    padding: 10px 20px;
+}
+
+.submenu li a:hover {
+    background: #3b82f6;
+    color: white;
+}
+
+/* Mostrar menú desplegable */
+.menu-item:hover .submenu {
+    display: block;
+}
+
+/* Para la parte de contactos */
+
