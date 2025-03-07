@@ -1,7 +1,7 @@
 /* Estilos generales */
 body {
     font-family: 'Inter', sans-serif;
-    color: #333;
+    color: #333;-
     line-height: 1.6;
 }
 
@@ -30,34 +30,71 @@ body {
 #contacto { background-image: url('assets/casa.jpg'); }
 
 /* Capa de oscurecimiento */
-.overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-/* Header */
-header {
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.overlay-bg {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    z-index: 1000;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    display: none;
 }
 
-/* Nav */
-header nav a {
-    transition: color 0.3s ease;
+/* Activar sombreado */
+.show-overlay {
+    display: block;
 }
 
-header nav a:hover {
+/* Estilos del menú */
+.menu-container {
+    position: relative;
+    z-index: 20;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-item a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.menu-item a:hover {
     color: #3b82f6;
 }
 
-/* Footer */
-footer {
-    background-color: #1e293b;
-    color: #ffffff;
-    text-align: center;
-    padding: 2rem 0;
+/* Submenú */
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    display: none;
+    min-width: 200px;
+    z-index: 20;
+}
+
+.submenu li a {
+    display: block;
+    padding: 10px 20px;
+}
+
+.submenu li a:hover {
+    background: #3b82f6;
+    color: white;
+}
+
+/* Mostrar menú desplegable */
+.menu-item:hover .submenu {
+    display: block;
 }
