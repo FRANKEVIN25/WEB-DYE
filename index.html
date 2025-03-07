@@ -14,24 +14,61 @@
 <body class="font-sans bg-gray-50">
 
     <!-- Header -->
-    <header class="bg-white shadow fixed top-0 w-full z-10">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold text-blue-600">DYE</div>
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#nosotros" class="text-gray-800 hover:text-blue-500">Nosotros</a>
-                    <a href="#servicios" class="text-gray-800 hover:text-blue-500">Servicios</a>
-                    <a href="#proyectos" class="text-gray-800 hover:text-blue-500">Proyectos</a>
-                    <a href="#diferencia" class="text-gray-800 hover:text-blue-500">La Diferencia</a>
-                    <a href="#blogs" class="text-gray-800 hover:text-blue-500">Blogs</a>
-                    <a href="#contacto" class="text-gray-800 hover:text-blue-500">Contacto</a>
-                </nav>
-            </div>
+    <header class="bg-white shadow fixed top-0 w-full z-20">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600">DYE</div>
+            <nav class="menu-container">
+                <ul class="menu md:flex space-x-8">
+                    <li class="menu-item">
+                        <a href="#nosotros">Nosotros</a>
+                        <ul class="submenu">
+                            <li><a href="#">Historia</a></li>
+                            <li><a href="#">Equipo</a></li>
+                            <li><a href="#">Valores</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#servicios">Servicios</a>
+                        <ul class="submenu">
+                            <li><a href="#">Diseño</a></li>
+                            <li><a href="#">Consultoría</a></li>
+                            <li><a href="#">Gestión</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#proyectos">Proyectos</a>
+                        <ul class="submenu">
+                            <li><a href="#">Recientes</a></li>
+                            <li><a href="#">Destacados</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#diferencia">La Diferencia</a>
+                        <ul class="submenu">
+                            <li><a href="#">Innovación</a></li>
+                            <li><a href="#">Calidad</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#blogs">Blogs</a>
+                        <ul class="submenu">
+                            <li><a href="#">Últimos artículos</a></li>
+                            <li><a href="#">Tendencias</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                    <li class="menu-item">
+                        <a href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!-- Secciones con efecto parallax -->
-    <section class="parallax hero" id="hero">
+    <div class="overlay-bg"></div>
+
+    <!-- Secciones con Parallax -->
+    <section class="parallax" id="hero">
         <div class="overlay">
             <h1 class="text-5xl font-bold">Innovación en Espacios de Trabajo</h1>
             <p class="text-xl mt-4">Transformamos tu espacio, transformamos tu empresa.</p>
@@ -89,8 +126,20 @@
 
     <script>
         AOS.init();
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuContainer = document.querySelector(".menu-container");
+            const overlayBg = document.querySelector(".overlay-bg");
+
+            menuContainer.addEventListener("mouseenter", function () {
+                overlayBg.classList.add("show-overlay");
+            });
+
+            menuContainer.addEventListener("mouseleave", function () {
+                overlayBg.classList.remove("show-overlay");
+            });
+        });
     </script>
 
 </body>
-
 </html>
