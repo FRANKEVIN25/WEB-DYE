@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - DYE</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</head>
+
+<body class="font-sans bg-gray-50">
+
+    <!-- Header -->
+    <header class="bg-white shadow fixed top-0 w-full z-20">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="../index.html">
+            <img src="LOGODYE.jpg" alt="Logo" class="h-20">
+            </a>
+            <nav class="menu-container">
+                <ul class="menu md:flex space-x-8">
+                    <li class="menu-item"><a href="../index.html">Inicio</a></li>
+                    <li class="menu-item">
+                        <a href="nosotros.html">Nosotros</a>
+                        <ul class="submenu">
+                            <li><a href="nosotros.html#somos">Somos</a></li>
+                            <li><a href="nosotros.html#equipo">EL equipo</a></li>
+                            <li><a href="nosotros.html#Trauyectoria">Trayectoria</a></li>
+                            <li><a href="nosotros.html#Clientes">Clientes</a></li>
+                            <li><a href="nosotros.html#Testimonios">Testimonios</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="servicios.html">Servicios</a>
+                        <ul class="submenu">
+                            <li><a href="servicios.html#diseno">Diseño</a></li>
+                            <li><a href="servicios.html#consultoria">Consultoría</a></li>
+                            <li><a href="servicios.html#construcción">Construcción</a></li>
+                            <li><a href="servicios.html#facility management">Facility management</a></li>
+                            <li><a href="servicios.html#design build">Desing Build</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="proyectos.html">Proyectos</a>
+                        <ul class="submenu">
+                            <li><a href="proyectos.html#agricola">Agrícola</a></li>
+                            <li><a href="proyectos.html#Comercial">Comercial</a></li>
+                            <li><a href="proyectos.html#comunicaciones">Comunicaciones</a></li>
+                            <li><a href="proyectos.html#Construccion / inmobiliario">Construcción/Inmobiliario</a></li>
+                            <li><a href="proyectos.html#energetico">Energético</a></li>
+                            <li><a href="proyectos.html#Entretenimiento">Entretenimiento</a></li>
+                            <li><a href="proyectos.html#ambiental">Ambiental</a></li>
+                            <li><a href="proyectos.html#financiero">Financiero</a></li>
+                            <li><a href="proyectos.html#pesquero">Pesquero</a></li>
+                            <li><a href="proyectos.html#Salud">Salud</a></li>
+                            <li><a href="proyectos.html#industrial">Industrial</a></li>
+                            <li><a href="proyectos.html#Minero">Minero</a></li>
+                            <li><a href="proyectos.html#Retail">Retail</a></li>
+                            <li><a href="proyectos.html#Sanitario">Sanitario</a></li>
+                            <li><a href="proyectos.html#servicios">Servicios</a></li>
+                            <li><a href="proyectos.html#transporte/Aduanas">Transporte/Aduanas</a></li>
+                            <li><a href="proyectos.html#Tecnologia">Tecnología</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="diferencia.html">La Diferencia</a>
+                        <ul class="submenu">
+                            <li><a href="diferencia.html#Proposito">Proposito</a></li>
+                            <li><a href="diferencia.html#filosofia">Filosofía</a></li>
+                            <li><a href="diferencia.html#dinamicas de trabajo">Dinámicas de trabajo</a></li>
+                            <li><a href="diferencia.html#Procesos">Procesos</a></li>
+                            <li><a href="diferencia.html#Experiencia DYE">Experiencia DYE</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="blogs.html">Blogs</a>
+                        <ul class="submenu">
+                            <li><a href="blogs.html#salud y bienestar">Salud y Bienestar</a></li>
+                            <li><a href="blogs.html#Diseño eficiente">Diseño eficiente</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="overlay-bg"></div>
+
+    <!-- Contenido principal - ajustado para dejar espacio para el header fijo -->
+    <section class="container mx-auto px-6 py-10 mt-24">
+        <h1 class="text-3xl font-bold mb-6">Contáctenos</h1>
+        
+        <div class="contact-info mb-8">
+            <p><strong>Dirección:</strong> Av. Larco 724 Piso 14, Miraflores, Lima - Perú</p>
+            <p><strong>Teléfono:</strong> +51 1 445-9095</p>
+            <p><strong>Email:</strong> info@eddico.com.pe</p>
+        </div>
+        
+        <form id="contact-form" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="mb-4">
+                    <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Nombre de Contacto *</label>
+                    <input type="text" id="nombre" name="nombre" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">E-Mail *</label>
+                    <input type="email" id="email" name="email" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="mb-4">
+                    <label for="empresa" class="block text-gray-700 text-sm font-bold mb-2">Nombre de la Empresa *</label>
+                    <input type="text" id="empresa" name="empresa" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                
+                <div class="mb-4">
+                    <label for="telefono" class="block text-gray-700 text-sm font-bold mb-2">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="mb-4">
+                    <label for="centro" class="block text-gray-700 text-sm font-bold mb-2">Centro de Negocios</label>
+                    <input type="text" id="centro" name="centro" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                
+                <div class="mb-4">
+                    <label for="servicio" class="block text-gray-700 text-sm font-bold mb-2">Servicio Requerido</label>
+                    <input type="text" id="servicio" name="servicio" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="mb-4">
+                    <label for="proyecto" class="block text-gray-700 text-sm font-bold mb-2">Fin del Proyecto</label>
+                    <input type="text" id="proyecto" name="proyecto" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                
+                <div class="mb-4">
+                    <label for="mes" class="block text-gray-700 text-sm font-bold mb-2">Mes *</label>
+                    <select id="mes" name="mes" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        <option value="">Seleccionar</option>
+                        <option value="Enero">Enero</option>
+                        <option value="Febrero">Febrero</option>
+                        <option value="Marzo">Marzo</option>
+                        <option value="Abril">Abril</option>
+                        <option value="Mayo">Mayo</option>
+                        <option value="Junio">Junio</option>
+                        <option value="Julio">Julio</option>
+                        <option value="Agosto">Agosto</option>
+                        <option value="Septiembre">Septiembre</option>
+                        <option value="Octubre">Octubre</option>
+                        <option value="Noviembre">Noviembre</option>
+                        <option value="Diciembre">Diciembre</option>
+                    </select>
+                </div>
+                
+                <div class="mb-4">
+                    <label for="anio" class="block text-gray-700 text-sm font-bold mb-2">Año *</label>
+                    <select id="anio" name="anio" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        <option value="">Seleccionar</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="mb-4">
+                <label for="mensaje" class="block text-gray-700 text-sm font-bold mb-2">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"></textarea>
+            </div>
+            
+            <div class="flex items-center justify-center">
+                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    ENVIAR
+                </button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-600 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 DYE. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init();
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuContainer = document.querySelector(".menu-container");
+            const overlayBg = document.querySelector(".overlay-bg");
+
+            menuContainer.addEventListener("mouseenter", function () {
+                overlayBg.classList.add("show-overlay");
+            });
+
+            menuContainer.addEventListener("mouseleave", function () {
+                overlayBg.classList.remove("show-overlay");
+            });
+        });
+
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Formulario enviado con éxito. Nos pondremos en contacto pronto.');
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>
