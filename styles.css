@@ -1,0 +1,63 @@
+/* Estilos generales */
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Efecto Parallax */
+.parallax {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* Imágenes de fondo */
+#hero { background-image: url('assets/casa.jpg'); }
+#nosotros { background-image: url('assets/parque.jpg'); }
+#servicios { background-image: url('assets/casa.jpg'); }
+#proyectos { background-image: url('assets/parque.jpg'); }
+#diferencia { background-image: url('assets/casa.jpg'); }
+#blogs { background-image: url('assets/parque.jpg'); }
+#contacto { background-image: url('assets/casa.jpg'); }
+
+/* Capa de oscurecimiento */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Nav */
+header nav a {
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #3b82f6;
+}
+
+/* Footer */
+footer {
+    background-color: #1e293b;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 0;
+}
