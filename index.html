@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workspace Architecture</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Estilos personalizados */
+        .hero {
+            background-image: url('ruta/a/tu/imagen-de-fondo.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="font-sans">
+
+    <!-- Header -->
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-gray-800">EDDICO</div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#nosotros" class="text-gray-800 hover:text-blue-500">Nosotros</a>
+                    <a href="#servicios" class="text-gray-800 hover:text-blue-500">Servicios</a>
+                    <a href="#proyectos" class="text-gray-800 hover:text-blue-500">Proyectos</a>
+                    <a href="#diferencia" class="text-gray-800 hover:text-blue-500">La Diferencia</a>
+                    <a href="#blogs" class="text-gray-800 hover:text-blue-500">Blogs</a>
+                    <a href="#contacto" class="text-gray-800 hover:text-blue-500">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero h-96 flex items-center justify-center">
+        <div class="text-center">
+            <h1 class="text-5xl font-bold text-white">Workspace Architecture</h1>
+            <p class="text-xl text-white mt-4">Innovando la forma en que las personas trabajan desde 2002</p>
+        </div>
+    </section>
+
+    <!-- Sección Nosotros -->
+    <section id="nosotros" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center">Nosotros</h2>
+            <p class="mt-4 text-center text-gray-600">Somos una empresa dedicada a transformar espacios de trabajo...</p>
+        </div>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section id="servicios" class="bg-gray-100 py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center">Servicios</h2>
+            <div class="mt-8 grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-bold">Diseño de Espacios</h3>
+                    <p class="mt-2 text-gray-600">Creamos espacios funcionales y modernos.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-bold">Consultoría</h3>
+                    <p class="mt-2 text-gray-600">Asesoramiento personalizado para tu negocio.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-bold">Gestión de Proyectos</h3>
+                    <p class="mt-2 text-gray-600">Coordinamos y ejecutamos tus proyectos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center">Contacto</h2>
+            <form class="mt-8 max-w-lg mx-auto">
+                <input type="text" placeholder="Nombre" class="w-full p-2 border rounded">
+                <input type="email" placeholder="Correo" class="w-full p-2 border rounded mt-4">
+                <textarea placeholder="Mensaje" class="w-full p-2 border rounded mt-4"></textarea>
+                <button type="submit" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2023 EDDICO. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
