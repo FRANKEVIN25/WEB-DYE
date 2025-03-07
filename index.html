@@ -21,18 +21,102 @@
     <header class="bg-white shadow">
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold text-gray-800">EDDICO</div>
+                <div class="text-2xl font-bold text-gray-800">DYE</div>
                 <nav class="hidden md:flex space-x-8">
-                    <a href="#nosotros" class="text-gray-800 hover:text-blue-500">Nosotros</a>
-                    <a href="#servicios" class="text-gray-800 hover:text-blue-500">Servicios</a>
-                    <a href="#proyectos" class="text-gray-800 hover:text-blue-500">Proyectos</a>
-                    <a href="#diferencia" class="text-gray-800 hover:text-blue-500">La Diferencia</a>
-                    <a href="#blogs" class="text-gray-800 hover:text-blue-500">Blogs</a>
+                    <!-- Opción Nosotros con Menú Desplegable -->
+                    <div class="relative group">
+                        <a href="#nosotros" class="text-gray-800 hover:text-blue-500 cursor-pointer">
+                            Nosotros
+                        </a>
+                        <ul class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <li><a href="#somos" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Somos</a></li>
+                            <li><a href="#equipo" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">El Equipo</a></li>
+                            <li><a href="#trayectoria" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Trayectoria</a></li>
+                            <li><a href="#clientes" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Clientes</a></li>
+                            <li><a href="#testimonios" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Testimonios</a></li>
+                        </ul>
+                    </div>
+    
+                    <!-- Opción Servicios con Menú Desplegable -->
+                    <div class="relative group">
+                        <a href="#servicios" class="text-gray-800 hover:text-blue-500 cursor-pointer">
+                            Servicios
+                        </a>
+                        <ul class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <li><a href="#consultoria" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Consultoría</a></li>
+                            <li><a href="#diseno" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Diseño</a></li>
+                            <li><a href="#construccion" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Construcción</a></li>
+                            <li><a href="#facility" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Facility Management</a></li>
+                            <li><a href="#designbuild" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Design Build</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Opción Proyectos con Menú Desplegable -->
+                <div class="relative group">
+                    <a href="#proyectos" class="text-gray-800 hover:text-blue-500 cursor-pointer">
+                        Proyectos
+                    </a>
+                    <ul class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <li><a href="#agricola" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Agrícola</a></li>
+                        <li><a href="#comercial" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Comercial</a></li>
+                        <li><a href="#comunicaciones" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Comunicaciones</a></li>
+                        <li><a href="#construccion" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Construcción / Inmobiliario</a></li>
+                        <li><a href="#coworking" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Coworking</a></li>
+                        <li><a href="#energetico" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Energético</a></li>
+                        <li><a href="#entretenimiento" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Entretenimiento</a></li>
+                        <li><a href="#ambiental" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Ambiental</a></li>
+                        <li><a href="#financiero" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Financiero</a></li>
+                        <li><a href="#pesquero" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Pesquero</a></li>
+                        <li><a href="#salud" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Salud</a></li>
+                        <li><a href="#industrial" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Industrial</a></li>
+                        <li><a href="#minero" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Minero</a></li>
+                        <li><a href="#retail" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Retail</a></li>
+                        <li><a href="#sanitario" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Sanitario</a></li>
+                        <li><a href="#servicios" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Servicios</a></li>
+                        <li><a href="#transporte" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Transporte / Aduanas</a></li>
+                        <li><a href="#tecnologia" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Tecnología</a></li>
+                    </ul>
+                </div>
+    
+                    <!-- Opción La Diferencia con Menú Desplegable -->
+                    <div class="relative group">
+                        <a href="#diferencia" class="text-gray-800 hover:text-blue-500 cursor-pointer">
+                            La Diferencia
+                        </a>
+                        <ul class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <li><a href="#proposito" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Propósito</a></li>
+                            <li><a href="#valores" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Valores Veca</a></li>
+                            <li><a href="#filosofia" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Filosofía</a></li>
+                            <li><a href="#dinamicas" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Dinámicas de Trabajo</a></li>
+                            <li><a href="#procesos" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Procesos</a></li>
+                            <li><a href="#experiencia" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Experiencia DYE</a></li>
+                        </ul>
+                    </div>
+    
+                    <!-- Opción Blogs con Menú Desplegable -->
+                    <div class="relative group">
+                        <a href="#blogs" class="text-gray-800 hover:text-blue-500 cursor-pointer">
+                            Blogs
+                        </a>
+                        <ul class="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <li><a href="#rethinking" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Rethinking Workspace</a></li>
+                            <li><a href="#salud" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Salud y Bienestar</a></li>
+                            <li><a href="#diseno" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Diseño Eficiente</a></li>
+                            <li><a href="#dinamica" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Dinámica de Trabajo</a></li>
+                        </ul>
+                    </div>
+    
+                    <!-- Opción Contacto -->
                     <a href="#contacto" class="text-gray-800 hover:text-blue-500">Contacto</a>
                 </nav>
             </div>
         </div>
     </header>
+    
+    
+    
+    
+    
 
     <!-- Hero Section -->
     <section class="hero h-96 flex items-center justify-center">
@@ -42,6 +126,7 @@
         </div>
     </section>
 
+        <!-- Sección Nosotros -->
     <!-- Sección Nosotros -->
     <section id="nosotros" class="py-16">
         <div class="container mx-auto px-6">
@@ -49,6 +134,13 @@
             <p class="mt-4 text-center text-gray-600">Somos una empresa dedicada a transformar espacios de trabajo...</p>
         </div>
     </section>
+
+            <p class="mt-4 text-center text-gray-600">
+                Somos una empresa dedicada a transformar espacios de trabajo.
+            </p>
+        </div>
+    </section>
+
 
     <!-- Sección Servicios -->
     <section id="servicios" class="bg-gray-100 py-16">
@@ -87,7 +179,7 @@
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2023 EDDICO. Todos los derechos reservados.</p>
+            <p>&copy; 2023 DYE. Todos los derechos reservados.</p>
         </div>
     </footer>
 
