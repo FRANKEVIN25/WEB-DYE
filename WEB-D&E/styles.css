@@ -1,0 +1,882 @@
+/* Estilos generales */
+body {
+  font-family: 'Inter', sans-serif;
+  color: #ffffff; /* Cambiado a blanco para mejor contraste con fondo negro */
+  line-height: 1.6;
+  background-color: #000000; /* Fondo negro para todo el sitio */
+}
+
+/* Eliminar el degradado diagonal naranja/blanco */
+body::before {
+  display: none; /* Quitamos el degradado diagonal existente */
+}
+
+/* BARRA DE NAVEGACIÓN EN BLANCO */
+header.bg-white {
+  background-color: #ffffff !important; /* Cambiado a blanco y forzado con !important */
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra más visible */
+  height: 120px;
+  padding: 10px 0;
+}
+
+/* Ajustar el logo para que se adapte a la barra */
+header img.h-20 {
+  height: 300px;
+  width: auto;
+  transition: all 0.3s ease;
+}
+
+/* Centrar verticalmente todos los elementos */
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+/* Versión responsive */
+@media (max-width: 768px) {
+  header.bg-white {
+      height: 50px;
+      background-color: #ffffff !important; /* Mantiene el blanco en móvil */
+      padding: 45px 0; /* Añadido padding */
+  }
+  
+  header img.h-20 {
+      height: 150px;
+  }
+}
+
+/* Actualizar color del header */
+header {
+  background-color: #ffffff; /* Cambiado a blanco */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Efecto Parallax */
+.parallax {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+/* Imágenes de fondo */
+#hero { background-image: url('assets/casa.jpg'); }
+#nosotros { background-image: url('assets/personas.jpg'); }
+#servicios { background-image: url('assets/servicios.jpg'); }
+#proyectos { background-image: url('assets/proyectos.jpg'); }
+#diferencia { background-image: url('assets/diferencia.jpg'); }
+#mantenimiento { background-image: url('assets/mantenimiento.jpg'); }
+#contacto { background-image: url('assets/contacto.jp'); }
+
+/* Capa de oscurecimiento */
+.overlay-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Más oscuro para contrastar con el negro */
+  z-index: 10;
+  display: none;
+}
+
+/* Activar sombreado */
+.show-overlay {
+  display: block;
+}
+
+/* Estilos del menú */
+.menu-container {
+  position: relative;
+  z-index: 20;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+}
+
+.menu-item {
+  position: relative;
+}
+
+/* Color texto menú para barra blanca */
+.menu-item a {
+  display: block;
+  padding: 10px 20px;
+  color: #000000 !important; /* Cambiado a negro para contraste con barra blanca */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.menu-item a:hover {
+  color: #FFD700 !important; /* Amarillo dorado para hover */
+}
+
+/* Submenú */
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff; /* Fondo blanco para submenú */
+  display: none;
+  min-width: 200px;
+  z-index: 20;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.submenu li a {
+  display: block;
+  padding: 10px 20px;
+  color: #000000 !important; /* Texto negro */
+}
+
+.submenu li a:hover {
+  background: #FFD700; /* Amarillo dorado */
+  color: #000000 !important; /* Texto negro al hacer hover */
+}
+
+/* Mostrar menú desplegable */
+.menu-item:hover .submenu {
+  display: block;
+}
+
+/* Mejora de la tipografía del menú principal */
+.menu-item > a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #000000 !important; /* Cambiado a negro para contraste con barra blanca */
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover para el menú principal */
+.menu-item > a:hover {
+  color: #FFD700 !important; /* Amarillo dorado para hover */
+  font-weight: 700;
+}
+
+/* Estilos para los elementos del submenú */
+.submenu li a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #333333 !important; /* Gris oscuro */
+  transition: all 0.3s ease;
+}
+
+/* Efecto hover para el submenú */
+.submenu li a:hover {
+  background: #FFD700; /* Amarillo dorado */
+  color: #000000 !important; /* Texto negro al hacer hover */
+  font-weight: 600;
+}
+
+/* Personalizar títulos dentro de parallax */
+.parallax h1 {
+  font-size: 4rem;
+  color: #FFD700; /* Amarillo dorado para títulos principales */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra para mejorar legibilidad */
+}
+
+.parallax h2 {
+  font-size: 2.5rem;
+  color: #FFD700; /* Amarillo dorado para títulos */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Personalizar párrafos dentro de parallax */
+.parallax p {
+  font-size: 1.2rem;
+  color: #ffffff; /* Blanco para párrafos */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.parallax .overlay {
+  background: rgba(0, 0, 0, 0.6); /* Fondo oscuro con transparencia */
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  border: 1px solid rgba(255, 215, 0, 0.3); /* Borde sutil dorado */
+}
+
+/* Cambiar el footer */
+footer.bg-blue-600 {
+  background-color: #000000; /* Negro para el footer */
+  border-top: 1px solid #FFD700; /* Borde superior dorado */
+  color: #FFD700; /* Texto amarillo dorado */
+}
+
+/* Estilos para la página de diferencia */
+.texto-justificado {
+  text-align: justify;
+  line-height: 1.8;
+  color: #ffffff; /* Blanco para mejorar contraste */
+}
+
+/* Estilo para las imágenes de la sección */
+.image-container img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  transition: transform 0.3s ease;
+  border: 1px solid #FFD700; /* Borde dorado sutil */
+}
+
+.image-container img:hover {
+  transform: scale(1.02);
+}
+
+/* Mejora en los títulos de cada sección */
+.content-section h2 {
+  position: relative;
+  color: #FFD700; /* Amarillo dorado para títulos */
+}
+
+.content-section h2:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  height: 3px;
+  width: 60px;
+  background-color: #FFD700; /* Amarillo dorado */
+}
+
+  
+/* Estilos para el menú en móviles - corregido para ocultar submenús */
+@media (max-width: 768px) {
+  /* Botón de menú para móvil */
+  #mobile-menu-toggle {
+      z-index: 60;
+      color: #000000 !important;
+  }
+  
+  /* Contenedor principal del menú */
+  .menu-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 60%;
+      height: 100vh;
+      background-color: #000000;
+      padding:5 rem 1.5rem 2rem 1.5rem;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+      z-index: 50;
+      border-right: 1px solid #FFD700;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+  
+  .menu-container.active {
+      transform: translateX(0);
+  }
+  
+  /* Lista principal del menú */
+  .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+      height: auto;
+      width: 100%;
+      gap: 2rem;
+  }
+  
+  /* Elementos del menú principal */
+  .menu-item {
+      width: 100%;
+      text-align: center;
+      position: relative;
+      margin: 0;
+      padding: 0.5rem 0;
+  }
+  
+  /* Enlaces principales */
+  .menu-item > a {
+      color: #FFD700 !important;
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: block;
+      padding: 0.8rem 1rem;
+      text-align: center;
+      width: 100%;
+      transition: all 0.3s ease;
+  }
+  
+  /* Hover en enlaces principales */
+  .menu-item > a:hover {
+      background-color: rgba(255, 215, 0, 0.1);
+      transform: translateY(-2px);
+      border-radius: 5px;
+  }
+  
+  /* Submenús - IMPORTANTE: display:none por defecto */
+  .submenu {
+      position: relative;
+      display: none; /* Oculto por defecto */
+      background-color: rgba(17, 17, 17, 0.7);
+      margin: 0.5rem auto;
+      width: 90%;
+      border-radius: 5px;
+      padding: 0.5rem 0;
+      overflow: hidden;
+  }
+  
+  /* IMPORTANTE: Remover el :hover que muestra submenús */
+  .menu-item:hover .submenu {
+      display: none; /* Esto evita que aparezcan al pasar el mouse */
+  }
+  
+  /* Elementos del submenú */
+  .submenu li {
+      padding: 0.3rem 0;
+      width: 100%;
+  }
+  
+  /* Enlaces del submenú */
+  .submenu a {
+      color: #FFD700 !important;
+      font-size: 1.1rem;
+      padding: 0.5rem 1rem !important;
+      display: block;
+      transition: all 0.3s ease;
+      opacity: 0.9;
+  }
+  
+  /* Hover en enlaces del submenú */
+  .submenu a:hover {
+      opacity: 1;
+      background-color: rgba(255, 215, 0, 0.1);
+      padding-left: 1.5rem !important;
+  }
+  
+  /* Botón de cierre */
+  #mobile-menu-close {
+      display: block;
+      color: #FFD700 !important;
+      font-size: 2rem;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 60;
+  }
+  
+  /* Botón de expandir submenús */
+  .expand-btn {
+      position: absolute;
+      right: 0.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #FFD700;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  /* Línea separadora entre elementos */
+  .menu-item:not(:last-child)::after {
+      content: '';
+      display: block;
+      width: 50%;
+      height: 1px;
+      background-color: rgba(255, 215, 0, 0.2);
+      margin: 0.5rem auto 0;
+  }
+  
+  /* Para pantallas grandes, no mostrar el botón de expandir */
+  @media (min-width: 769px) {
+      .expand-btn {
+          display: none;
+      }
+  }
+}
+
+
+
+
+/* Para secciones normales fuera de parallax */
+.content-section {
+  background-color: #000000; /* Fondo negro para secciones de contenido */
+  color: #ffffff; /* Texto blanco */
+}
+
+/* Para títulos generales */
+h1, h2, h3, h4, h5, h6 {
+  color: #FFD700; /* Amarillo dorado para todos los títulos */
+}
+
+/* Para enlaces generales */
+a {
+  color: #FFD700; /* Amarillo dorado para enlaces */
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #FFA500; /* Naranja al hover */
+}
+
+
+/* Estilos específicos para la página de contacto */
+
+/* Fondo negro para toda la página */
+body {
+  background-color: #000000 !important;
+  color: #ffffff;
+}
+
+/* Ajustar el espaciado para compensar el header fijo */
+section.mt-24 {
+  margin-top: 140px; /* Ajustar según la altura de tu header */
+}
+
+/* Estilos para las tarjetas de contacto */
+.contact-card {
+  background-color: #111111;
+  border: 1px solid #FFD700;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  height: 100%;
+}
+
+/* Título de la sección de información de contacto */
+.contact-card h2 {
+  color: #FFD700;
+  border-bottom-color: #FFD700 !important;
+}
+
+/* Elementos de información de contacto */
+.contact-info-item {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+.contact-icon {
+  background-color: #FFD700;
+  color: #000000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  font-size: 18px;
+}
+
+.contact-info-item h3 {
+  color: #FFD700;
+  margin-bottom: 5px;
+}
+
+.contact-info-item p {
+  color: #ffffff;
+  margin: 0 0 5px 0;
+}
+
+/* Iconos de redes sociales */
+.social-icon {
+  background-color: #FFD700;
+  color: #000000 !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(255, 215, 0, 0.3);
+}
+
+/* Contenedor del formulario */
+.contact-form-container {
+  background-color: #111111;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid #FFD700;
+  height: 100%;
+}
+
+/* Título del formulario */
+.contact-form-header h2 {
+  color: #FFD700;
+}
+
+.contact-form-header p {
+  color: #cccccc;
+}
+
+/* Estilos para el formulario */
+.contact-form label {
+  color: #FFD700 !important;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  background-color: #222222;
+  color: #ffffff;
+  border: 1px solid #333333;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: #FFD700;
+  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.2);
+}
+
+/* Estilo para el botón de enviar */
+.btn-primary {
+  background-color: #FFD700;
+  color: #000000;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #FFC700;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+/* Sección del mapa */
+.py-10.bg-gray-100 {
+  background-color: #000000 !important;
+}
+
+.py-10.bg-gray-100 h2 {
+  color: #FFD700;
+}
+
+.map-container {
+  height: 450px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #FFD700;
+}
+
+/* Footer */
+footer.bg-blue-600 {
+  background-color: #000000 !important;
+  border-top: 1px solid #FFD700;
+}
+
+footer p {
+  color: #FFD700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-card, 
+  .contact-form-container {
+      margin-bottom: 20px;
+  }
+  
+  section.mt-24 {
+      margin-top: 80px; /* Ajustar para móviles */
+  }
+}
+
+/* Personalizar etiquetas del formulario */
+.form-input {
+  color-scheme: dark;
+}
+
+::placeholder {
+  color: #666666;
+}
+
+/* Etiquetas de los campos requeridos */
+.text-gray-700 {
+  color: #cccccc !important;
+}
+
+/* Ajustes específicos para campos del formulario */
+option {
+  background-color: #222222;
+  color: #ffffff;
+}
+
+/* Aplicación de fuente Poppins para la barra de navegación */
+
+/* Importación de la fuente Poppins con diferentes pesos */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Aplicar Poppins a todos los elementos del menú */
+.menu-item > a,
+.submenu li a,
+.menu-container * {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+/* Estilo para los elementos principales del menú */
+.menu-item > a {
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #000000;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover para los elementos del menú principal */
+.menu-item > a:hover {
+    color: #FFD700;
+    font-weight: 600;
+}
+
+/* Estilos para el submenú */
+.submenu {
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.submenu li a {
+    font-size: 13px;
+    font-weight: 400;
+    padding: 8px 15px;
+    transition: all 0.2s ease;
+}
+
+.submenu li a:hover {
+    background-color: #FFD700;
+    color: #000000;
+    font-weight: 500;
+}
+
+/* Versión responsive */
+@media (max-width: 768px) {
+    .menu-item > a {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+    
+    .submenu li a {
+        font-size: 14px;
+    }
+}
+
+/* Estilos para la sección de valores */
+
+/* Contenedor principal de valores */
+.valores-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Estilo para cada valor individual */
+.valor-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  margin-bottom: 30px;
+}
+
+/* Contenedor del círculo con imagen */
+.valor-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #FFD700;
+  background-color: #111111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover para los círculos */
+.valor-circle:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+}
+
+/* Estilo para las imágenes dentro de los círculos */
+.valor-circle img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+/* Estilo para el título del valor */
+.valor-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #FFD700;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* Estilo para la descripción del valor */
+.valor-description {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .valores-container {
+      gap: 20px;
+  }
+  
+  .valor-item {
+      width: 45%;
+  }
+  
+  .valor-circle {
+      width: 120px;
+      height: 120px;
+  }
+  
+  .valor-circle img {
+      width: 60px;
+      height: 60px;
+  }
+  
+  .valor-title {
+      font-size: 1rem;
+  }
+  
+  .valor-description {
+      font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .valor-item {
+      width: 100%;
+  }
+}
+
+/* Estilos para los botones laterales de contacto */
+.contact-buttons-sidebar {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.contact-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 0;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.contact-button:hover {
+  transform: translateX(-5px);
+  width: 55px;
+}
+
+.whatsapp-button {
+  background-color: #000000;
+}
+
+.whatsapp-button:hover {
+  background-color: #000000;
+}
+
+.messenger-button {
+  background-color: #000000;
+}
+
+.messenger-button:hover {
+  background-color: #000000;
+}
+
+.email-button {
+  background-color: #000000;
+}
+
+.email-button:hover {
+  background-color: #000000;
+}
+
+/* Media query para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .contact-buttons-sidebar {
+      bottom: 20px;
+      top: auto;
+      right: 20px;
+      transform: none;
+      flex-direction: column;
+  }
+  
+  .contact-button {
+      width: 45px;
+      height: 45px;
+  }
+  
+  .contact-button:hover {
+      transform: none;
+      width: 45px;
+  }
+}
